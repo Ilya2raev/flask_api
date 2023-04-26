@@ -1,0 +1,22 @@
+<html> 
+<head> 
+<title>record</title> 
+</head> 
+<body> 
+<form method="post" enctype="multipart/form-data"> 
+<input type="submit" value="Microphone">
+</form>
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %} 
+{% if text %}
+   <p class="answer-text">
+   {{ text }}
+   </p>
+{% endif %}
+</body> 
+</html>
